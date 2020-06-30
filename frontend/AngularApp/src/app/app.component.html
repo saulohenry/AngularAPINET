@@ -1,0 +1,41 @@
+<style>
+  table, td, th {
+    border: 1px solid black;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  }
+
+  th {
+    height: 50px;
+  }
+</style>
+
+<h2>NOTAS PARA VISTO E APROVACAO</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>DataEmissao</th>
+    <th>ValorMercadorias</th>
+    <th>ValorDesconto</th>
+    <th>ValorFrete</th>
+    <th>ValorTotal</th>
+    <th>Status</th>
+    <th>Visto/Aprovacao</th>
+  </tr>
+
+  <tr *ngFor="let nota of lstNotas">
+    <td>{{nota.Id}}</td>
+    <td>{{nota.DataEmissao}}</td>
+    <td>{{nota.ValorMercadorias}}</td>
+    <td>{{nota.ValorDesconto}}</td>
+    <td>{{nota.ValorFrete}}</td>
+    <td>{{nota.ValorTotal}}</td>
+    <td>{{nota.Status}}</td>
+    <td><button (click)="Acao($event, nota)">Visto/Aprovacao</button></td>
+  </tr>
+
+</table>
